@@ -13,7 +13,7 @@ public class Main extends JavaPlugin {
 	public static String prefix = "§aLobby §7» §r";
 	
 	public void onEnable() {
-		Bukkit.getConsoleSender().sendMessage("§7[]=============================[]");
+		Bukkit.getConsoleSender().sendMessage("§9[]=============================[]");
 		Bukkit.getConsoleSender().sendMessage("      §4Plugin by MarksPlays");
 		Bukkit.getConsoleSender().sendMessage("");
 		Bukkit.getConsoleSender().sendMessage("");
@@ -21,13 +21,13 @@ public class Main extends JavaPlugin {
 		Bukkit.getConsoleSender().sendMessage("");
 		Bukkit.getConsoleSender().sendMessage("");
 		Bukkit.getConsoleSender().sendMessage("      §4Plugin by MarksPlays");
-		Bukkit.getConsoleSender().sendMessage("");
+		Bukkit.getConsoleSender().sendMessage("§9[]=============================[]");
 		
 		register();
 	}
 	
 	public void onDisable() {
-		Bukkit.getConsoleSender().sendMessage("§7[]=============================[]");
+		Bukkit.getConsoleSender().sendMessage("§9[]=============================[]");
 		Bukkit.getConsoleSender().sendMessage("      §2Plugin by MarksPlays");
 		Bukkit.getConsoleSender().sendMessage("");
 		Bukkit.getConsoleSender().sendMessage("");
@@ -35,13 +35,14 @@ public class Main extends JavaPlugin {
 		Bukkit.getConsoleSender().sendMessage("");
 		Bukkit.getConsoleSender().sendMessage("");
 		Bukkit.getConsoleSender().sendMessage("      §2Plugin by MarksPlays");
-		Bukkit.getConsoleSender().sendMessage("");
+		Bukkit.getConsoleSender().sendMessage("§9[]=============================[]");
 	}
 
 	public void register() {
 		PluginManager pm = Bukkit.getPluginManager();
 		pm.registerEvents(new JoinListener(), this);
 		pm.registerEvents(new QuitListener(), this);
+		pm.registerEvents(new PremiumChat(), this);
 	}
 	
 }
